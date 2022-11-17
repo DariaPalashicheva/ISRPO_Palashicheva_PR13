@@ -22,5 +22,20 @@
             <Setter Property="Height" Value="20"/>
             <Setter Property="Margin" Value="2"/>
         </Style>
+        <Style TargetType="TextBox" x:Key="TextBox">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="ComboBox">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

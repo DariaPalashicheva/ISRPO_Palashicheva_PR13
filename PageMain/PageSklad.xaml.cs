@@ -29,7 +29,7 @@ namespace ISRPO_Palashicheva_PR13.PageMain
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-
+          
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
@@ -39,7 +39,16 @@ namespace ISRPO_Palashicheva_PR13.PageMain
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            AppFrame.FrameMain.Navigate(new PageMain.PageSkladAdd());
+        }
 
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                TovarsEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DtGridTovar.ItemsSource = TovarsEntities.GetContext().Sklad.ToList();
+            }
         }
     }
 }

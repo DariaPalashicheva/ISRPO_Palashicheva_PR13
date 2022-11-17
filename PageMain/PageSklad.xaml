@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ISRPO_Palashicheva_PR13.PageMain"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageSklad">
+      Title="PageSklad" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
