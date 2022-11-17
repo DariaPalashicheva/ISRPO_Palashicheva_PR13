@@ -29,7 +29,7 @@ namespace ISRPO_Palashicheva_PR13.PageMain
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-          
+            AppFrame.FrameMain.Navigate(new PageSkladEditAdd((sender as Button).DataContext as Sklad));
         }
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
@@ -39,7 +39,7 @@ namespace ISRPO_Palashicheva_PR13.PageMain
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.FrameMain.Navigate(new PageMain.PageSkladAdd());
+            AppFrame.FrameMain.Navigate(new PageSkladEditAdd(null));
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

@@ -9,6 +9,28 @@
       Title="PageSkladEditAdd">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Наименование"/>
+        <TextBlock Text="Количество" Grid.Row="1"/>
+        <TextBlock Text="Цена" Grid.Row="2"/>
+        <TextBlock Text="Страна" Grid.Row="3"/>
+        <TextBlock Text="Комментарий" Grid.Row="4"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource TextBox}" MaxLength="50" Text="{Binding naimenov}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding kolichestvo}"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding cena}"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ComboBox}" x:Name="ComboStrana" SelectedItem="{Binding Strana}" DisplayMemberPath="Strana1"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding komment}"/>
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" Style="{StaticResource btnG}"/>
     </Grid>
 </Page>
