@@ -1,5 +1,4 @@
-﻿using ISRPO_Palashicheva_PR13.ApplicationData;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ISRPO_Palashicheva_PR13
+namespace ISRPO_Palashicheva_PR13.PageMain
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageSkladAdd.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageSkladAdd : Page
     {
-        public MainWindow()
+        public PageSkladAdd()
         {
             InitializeComponent();
-            AppConnect.modelOdb = new Sklad();
-            AppFrame.FrameMain = myFrame;
-            myFrame.Navigate(new PageMain.PageSklad());
         }
     }
 }

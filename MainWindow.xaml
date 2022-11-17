@@ -10,12 +10,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Rectangle Fill="#FF54F5F9"/>
         <Image Source="Resources/icon.png" HorizontalAlignment="Left" Height="60" Width="60"/>
         <TextBlock Text="Склад" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"/>
-        <Frame Grid.Row="1" x:Name="frmMain" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Row="1" x:Name="myFrame" NavigationUIVisibility="Hidden"/>
         <Rectangle Fill="#FF54F5F9" Grid.Row="2"/>
     </Grid>
 </Window>

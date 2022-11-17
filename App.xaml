@@ -4,6 +4,23 @@
              xmlns:local="clr-namespace:ISRPO_Palashicheva_PR13"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button" x:Key="btnG">
+            <Setter Property="Background" Value="LightGreen"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style TargetType="Button" x:Key="btnR">
+            <Setter Property="Background" Value="Red"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+        <Style TargetType="Button" x:Key="btnB">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
     </Application.Resources>
 </Application>

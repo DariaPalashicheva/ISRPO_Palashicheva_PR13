@@ -14,19 +14,32 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ISRPO_Palashicheva_PR13
+namespace ISRPO_Palashicheva_PR13.PageMain
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для PageSklad.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageSklad : Page
     {
-        public MainWindow()
+        public PageSklad()
         {
             InitializeComponent();
-            AppConnect.modelOdb = new Sklad();
-            AppFrame.FrameMain = myFrame;
-            myFrame.Navigate(new PageMain.PageSklad());
+            DtGridTovar.ItemsSource = TovarsEntities.GetContext().Sklad.ToList();
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
