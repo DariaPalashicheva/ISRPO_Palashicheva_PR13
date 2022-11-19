@@ -68,5 +68,11 @@ namespace ISRPO_Palashicheva_PR13.PageMain
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+
+            AppFrame.FrameMain.Navigate(new PageMain.PageSklad());
+        }
+
     }
 }

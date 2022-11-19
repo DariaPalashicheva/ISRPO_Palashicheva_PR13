@@ -31,6 +31,7 @@
         <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding cena}"/>
         <ComboBox Grid.Row="3" Grid.Column="1" Style="{StaticResource ComboBox}" x:Name="ComboStrana" SelectedItem="{Binding Strana}" DisplayMemberPath="Strana1"/>
         <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" Text="{Binding komment}"/>
+        <Button Grid.Row="5" Grid.Column="0" Content="Назад" Name="btnBack" Click="btnBack_Click" Style="{StaticResource btnR}"/>
         <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" Style="{StaticResource btnG}"/>
     </Grid>
 </Page>

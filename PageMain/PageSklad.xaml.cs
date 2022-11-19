@@ -34,7 +34,23 @@ namespace ISRPO_Palashicheva_PR13.PageMain
 
         private void btnDel_Click(object sender, RoutedEventArgs e)
         {
+            var tovarForRemoving = DtGridTovar.SelectedItems.Cast<Sklad>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить следующее {tovarForRemoving.Count()} элементов?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    TovarsEntities.GetContext().Sklad.RemoveRange(tovarForRemoving);
+                    TovarsEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
 
+                    DtGridTovar.ItemsSource=TovarsEntities.GetContext().Sklad.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
